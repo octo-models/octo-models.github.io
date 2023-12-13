@@ -1,0 +1,138 @@
+<script>
+	import { slide } from 'svelte/transition';
+	import { sineInOut } from 'svelte/easing';
+	import { createEventDispatcher } from 'svelte';
+	let show = false;
+	let container;
+	let preventScroll = true;
+	const dispatch = createEventDispatcher();
+
+	function handleScroll(event) {
+		if (!show) {
+			show = true;
+			setTimeout(() => {
+				preventScroll = false;
+				dispatch('show');
+			}, 700);
+		}
+		if (preventScroll) {
+			event.preventDefault();
+		}
+	}
+</script>
+
+<svelte:window
+	on:wheel|nonpassive={handleScroll}
+	on:touchmove={handleScroll}
+	on:scroll={handleScroll}
+/>
+
+{#if !show}
+	<div
+		class="w-full h-screen mb-0 flex flex-col items-center justify-between bg-gradient-to-b from-amber-500 to-amber-100"
+		bind:this={container}
+		transition:slide={{ delay: 0, duration: 500, axis: 'y', easing: sineInOut }}
+	>
+		<div class="mx-4 md:mx-16 flex items-center flex-grow pt-32">
+			<h1 class="leading-tight">
+				🐙 <b>Octo:</b> An Open-Source Foundation Model for Robotic Manipulation
+			</h1>
+		</div>
+		<div class="h-1/6 w-full">
+			<svg
+				class="w-full h-full"
+				xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 24 150 28"
+				preserveAspectRatio="none"
+				shape-rendering="auto"
+			>
+				<defs>
+					<path
+						id="gentle-wave"
+						d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+					/>
+				</defs>
+				<g class="parallax">
+					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(107, 124, 250, 0.7" />
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(50, 82, 227, 0.5)" />
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(107, 124, 250, 0.3)" />
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(30, 74, 200, 0.8)" />
+				</g>
+			</svg>
+		</div>
+	</div>
+{/if}
+
+{#if show}
+	<div
+		transition:slide={{ delay: 200, duration: 300, axis: 'y', easing: sineInOut }}
+		class="bg-gradient-to-b from-amber-100 to-white flex-col justify-start items-center"
+	>
+		<svg
+			class="w-full h-32 scale-y-[-1]"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 24 150 28"
+			preserveAspectRatio="none"
+			shape-rendering="auto"
+		>
+			<defs>
+				<path
+					id="gentle-wave"
+					d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+				/>
+			</defs>
+			<g class="parallax">
+				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(107, 124, 250, 0.7" />
+				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(50, 82, 227, 0.5)" />
+				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(107, 124, 250, 0.3)" />
+				<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(30, 74, 200, 0.8)" />
+			</g>
+		</svg>
+
+		<h2 class="leading-tight font-medium text-center mt-4">
+			🐙 <b>Octo:</b> An Open-Source Foundation Model for Robotic Manipulation
+		</h2>
+	</div>
+{/if}
+
+<style>
+	h1 {
+		font-size: min(max(50px, 6vw), 160px);
+	}
+
+	h2 {
+		font-size: min(max(50px, 6vw), 3rem);
+	}
+
+	/* Animation */
+
+	.parallax > use {
+		animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+	}
+	.parallax > use:nth-child(1) {
+		animation-delay: -2s;
+		animation-duration: 7s;
+	}
+	.parallax > use:nth-child(2) {
+		animation-delay: -3s;
+		animation-duration: 10s;
+	}
+	.parallax > use:nth-child(3) {
+		animation-delay: -4s;
+		animation-duration: 13s;
+	}
+	.parallax > use:nth-child(4) {
+		animation-delay: -5s;
+		animation-duration: 20s;
+	}
+	@keyframes move-forever {
+		0% {
+			transform: translate3d(-90px, 0, 0);
+		}
+		100% {
+			transform: translate3d(85px, 0, 0);
+		}
+	}
+</style>
