@@ -3,6 +3,7 @@
 	import VideoCarousel from './VideoCarousel.svelte';
 	import { base } from '$app/paths';
 	import Octo from './Octo.svelte';
+	import SideBySide from './SideBySide.svelte';
 
 	let renderVideos = false;
 	function handleShow() {
@@ -228,6 +229,8 @@
 		<div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div>
 		<div class="px-4"><sup>†</sup>New action space (joint position control)</div>
 	</div>
+
+	<SideBySide />
 
 	<!-- citation -->
 	<h2 class="text-4xl mt-16">Citation</h2>
