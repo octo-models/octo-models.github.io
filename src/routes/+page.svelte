@@ -59,7 +59,7 @@
 	<!-- links -->
 	<div class="flex w-full justify-between text-center pt-4 text-lg pb-4 mx-auto px-4">
 		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
-			<a href="{base}/" class="hover:underline text-black p-4 flex flex-col items-center">
+			<a href="{base}/paper.pdf" class="hover:underline text-black p-4 flex flex-col items-center">
 				<img src="{base}/documents.svg" alt="documents" class="w-16" />
 				Report
 			</a>
@@ -207,7 +207,7 @@
 					<td>0.20</td>
 				</tr>
 				<tr class="md:border-b-8 md:border-b-transparent">
-					<td>VC-1</td>
+					<td><a href="https://eai-vc.github.io/">VC-1</a></td>
 					<td>0.30</td>
 					<td>0.00</td>
 					<td>0.05</td>
@@ -230,6 +230,20 @@
 		<div class="px-4"><sup>†</sup>New action space (joint position control)</div>
 	</div>
 
+	<p class="mt-8">
+		Out-of-the-box, Octo can control multiple robots in environments from the pretraining data. When
+		using natural language to specify tasks, it outperforms <a
+			href="https://robotics-transformer-x.github.io/">RT-1-X</a
+		>: the current best, openly available generalist robotic policy. It performs similarly to
+		<a href="https://robotics-transformer-x.github.io/">RT-2-X</a>, a 55-billion parameter model.
+	</p>
+	<p class="mt-4">
+		Octo also enables data-efficient finetuning to new domains and out-performs training from
+		scratch as well as state-of-the-art pretrained visual representations (<a
+			href="https://eai-vc.github.io/">VC-1</a
+		>). Each domain uses &#126;100 target demonstrations.
+	</p>
+
 	<SideBySide />
 
 	<!-- citation -->
@@ -237,7 +251,7 @@
 	<p class="mt-8">Please use the following BibTeX entry to cite this work:</p>
 	<pre class="mt-4 overflow-x-scroll bg-slate-100 p-8">
 {`@article{team2023octo,
-	title={Octo: An Open-Source Foundation Model for Robotic Manipulation},
+	title={Octo: An Open-Source Generalist Robot Policy},
 	author={Octo Model Team and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and You Liang Tan and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
 	year={2023}
 }`}</pre>

@@ -5,7 +5,15 @@
 
 	export let renderVideos = false;
 
-	const videoNames = ['out_ur5', 'out_cmu', 'out_iliad', 'out_fmb', 'out_bridge', 'out_rpt'];
+	const videoNames = [
+		'out_ours_ur5_tiger',
+		'out_cmu',
+		'out_iliad',
+		'out_ours_ur5_cloth',
+		'out_fmb',
+		'out_bridge',
+		'out_rpt'
+	];
 
 	const videoData = videoNames.map((name) => ({
 		src: `videos/${name}.mp4`,
@@ -32,6 +40,7 @@
 			start: 0,
 			autoplay: true,
 			rewind: true,
+			interval: 10000,
 			breakpoints: {
 				768: {
 					perPage: 1
