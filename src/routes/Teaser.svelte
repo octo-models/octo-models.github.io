@@ -3,7 +3,7 @@
 	import { Splide, SplideSlide } from '@splidejs/svelte-splide';
 	import '@splidejs/svelte-splide/css';
 
-	export let show = false;
+	export let renderVideos = false;
 
 	const videoNames = ['out_ur5', 'out_cmu', 'out_iliad', 'out_fmb'];
 
@@ -30,7 +30,7 @@
 	>
 		{#each videoData as video, i}
 			<SplideSlide>
-				{#if show}
+				{#if renderVideos}
 					<div class="px-2">
 						<div class="rounded-lg overflow-hidden flex justify-center">
 							<video

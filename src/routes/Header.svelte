@@ -1,73 +1,61 @@
 <script>
 	import { slide } from 'svelte/transition';
 	import { sineInOut } from 'svelte/easing';
-	import { createEventDispatcher } from 'svelte';
-	let show = false;
-	let container;
-	let preventScroll = true;
+	import { createEventDispatcher, onMount } from 'svelte';
+
 	const dispatch = createEventDispatcher();
 
+	let showTitle = true;
 	function handleScroll(event) {
-		if (!show) {
-			show = true;
-			setTimeout(() => {
-				preventScroll = false;
-				dispatch('show');
-			}, 700);
-		}
-		if (preventScroll) {
-			event.preventDefault();
+		if (showTitle && window.scrollY > 0) {
+			showTitle = false;
+			dispatch("hideTitle");
 		}
 	}
+
+	onMount(handleScroll);
 </script>
 
-<svelte:window
-	on:wheel|nonpassive={handleScroll}
-	on:touchmove={handleScroll}
-	on:scroll={handleScroll}
-/>
+<svelte:window on:scroll={handleScroll} />
 
-{#if !show}
-	<div
-		class="w-full h-screen mb-0 flex flex-col items-center justify-between bg-gradient-to-b from-amber-500 to-amber-100"
-		bind:this={container}
-		transition:slide={{ delay: 0, duration: 500, axis: 'y', easing: sineInOut }}
-	>
-		<div class="mx-4 md:mx-16 flex items-center flex-grow pt-32">
-			<h1 class="leading-tight">
-				🐙 <b>Octo:</b> An Open-Source Foundation Model for Robotic Manipulation
-			</h1>
-		</div>
-		<div class="h-1/6 w-full">
-			<svg
-				class="w-full h-full"
-				xmlns="http://www.w3.org/2000/svg"
-				xmlns:xlink="http://www.w3.org/1999/xlink"
-				viewBox="0 24 150 28"
-				preserveAspectRatio="none"
-				shape-rendering="auto"
-			>
-				<defs>
-					<path
-						id="gentle-wave"
-						d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-					/>
-				</defs>
-				<g class="parallax">
-					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(107, 124, 250, 0.7" />
-					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(50, 82, 227, 0.5)" />
-					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(107, 124, 250, 0.3)" />
-					<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(30, 74, 200, 0.8)" />
-				</g>
-			</svg>
-		</div>
+<div
+	class="w-full h-screen mb-0 flex flex-col items-center justify-center bg-gradient-to-b from-amber-500 to-amber-100 transition-all ease-in-out duration-1000 overflow-hidden relative"
+	class:collapsed={!showTitle}
+>
+	<div class="mx-4 md:mx-16 flex flex-col justify-center pb-32">
+		<h1 class="leading-tight transition-all duration-1000 font-light">
+			🐙 <span class="font-bold">Octo:</span> An Open-Source Foundation Model for Robotic Manipulation
+		</h1>
 	</div>
-{/if}
+	<div class="h-32 w-full absolute bottom-0">
+		<svg
+			class="w-full h-full"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			viewBox="0 24 150 28"
+			preserveAspectRatio="none"
+			shape-rendering="auto"
+		>
+			<defs>
+				<path
+					id="gentle-wave"
+					d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+				/>
+			</defs>
+			<g class="parallax">
+				<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(107, 124, 250, 0.7" />
+				<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(50, 82, 227, 0.5)" />
+				<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(107, 124, 250, 0.3)" />
+				<use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(30, 74, 200, 0.8)" />
+			</g>
+		</svg>
+	</div>
+</div>
 
-{#if show}
+{#if !showTitle}
 	<div
-		transition:slide={{ delay: 200, duration: 300, axis: 'y', easing: sineInOut }}
-		class="bg-gradient-to-b from-amber-100 to-white flex-col justify-start items-center"
+		class="bg-gradient-to-b from-amber-200 to-white flex-col justify-start items-center"
+		transition:slide={{ delay: 200, duration: 300, easing: sineInOut }}
 	>
 		<svg
 			class="w-full h-32 scale-y-[-1]"
@@ -92,7 +80,7 @@
 		</svg>
 
 		<h2 class="leading-tight font-medium text-center mt-4">
-			🐙 <b>Octo:</b> An Open-Source Foundation Model for Robotic Manipulation
+			🐙 <span class="font-bold">Octo:</span> An Open-Source Foundation Model for Robotic Manipulation
 		</h2>
 	</div>
 {/if}
@@ -104,6 +92,14 @@
 
 	h2 {
 		font-size: min(max(50px, 6vw), 3rem);
+	}
+
+	.collapsed {
+		height: 8rem;
+	}
+
+	.collapsed h1 {
+		padding-top: 50%;
 	}
 
 	/* Animation */
