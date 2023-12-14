@@ -2,6 +2,7 @@
 	import { slide } from 'svelte/transition';
 	import { sineInOut } from 'svelte/easing';
 	import { createEventDispatcher, onMount } from 'svelte';
+	import Octo from './Octo.svelte';
 
 	const dispatch = createEventDispatcher();
 
@@ -9,7 +10,7 @@
 	function handleScroll(event) {
 		if (showTitle && window.scrollY > 0) {
 			showTitle = false;
-			dispatch("hideTitle");
+			dispatch('hideTitle');
 		}
 	}
 
@@ -24,7 +25,8 @@
 >
 	<div class="mx-4 md:mx-16 flex flex-col justify-center pb-32">
 		<h1 class="leading-tight transition-all duration-1000 font-light">
-			🐙 <span class="font-bold">Octo:</span> An Open-Source Foundation Model for Robotic Manipulation
+			<span class="font-bold"><Octo reverse={true} />:</span> An Open-Source Foundation Model for Robotic
+			Manipulation
 		</h1>
 	</div>
 	<div class="h-32 w-full absolute bottom-0">
@@ -79,8 +81,9 @@
 			</g>
 		</svg>
 
-		<h2 class="leading-tight font-medium text-center mt-4">
-			🐙 <span class="font-bold">Octo:</span> An Open-Source Foundation Model for Robotic Manipulation
+		<h2 class="leading-tight font-medium text-center mt-4 px-2 md:px-8">
+			<span class="font-bold"><Octo reverse={true} />:</span> An Open-Source Foundation Model for Robotic
+			Manipulation
 		</h2>
 	</div>
 {/if}
@@ -99,7 +102,7 @@
 	}
 
 	.collapsed h1 {
-		padding-top: 50%;
+		padding-top: 200%;
 	}
 
 	/* Animation */

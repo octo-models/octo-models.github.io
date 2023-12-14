@@ -57,3 +57,12 @@
 		{/each}
 	</Splide>
 </div>
+
+<style>
+	:global(.splide__pagination__page) {
+		background: rgb(51, 51, 51);
+	}
+	:global(.splide__pagination__page.is-active) {
+		background: black;
+	}
+</style>
