@@ -236,12 +236,23 @@
 			href="https://robotics-transformer-x.github.io/">RT-1-X</a
 		>: the current best, openly available generalist robotic policy. It performs similarly to
 		<a href="https://robotics-transformer-x.github.io/">RT-2-X</a>, a 55-billion parameter model.
+		Additionally, while RT-1-X and RT-2-X only support language conditioning, Octo also supports
+		goal image conditioning. On the WidowX tasks, we found that Octo achieved even better
+		performance with goal image conditioning &mdash; 25% higher on average &mdash; likely because
+		goal images provide more information about how to achieve the task.
 	</p>
 	<p class="mt-4">
-		Octo also enables data-efficient finetuning to new domains and out-performs training from
-		scratch as well as state-of-the-art pretrained visual representations (<a
-			href="https://eai-vc.github.io/">VC-1</a
-		>). Each domain uses &#126;100 target demonstrations.
+		We also find that finetuning Octo leads to better policies than starting from scratch or with
+		the pretrained <a href="https://eai-vc.github.io">VC-1</a> weights, with an average success rate
+		improvement of 55% across the four evaluation tasks. Each task uses &#126;100 target
+		demonstrations. Importantly, we use
+		<a href="https://github.com/octo-models/octo/blob/main/scripts/configs/finetune_config.py"
+			>the same finetuning recipe</a
+		> for all evaluation tasks, making this a good default configuration for Octo finetuning. The results
+		underline Octo's ability to accommodate new observations (force-torque inputs for "Berkeley Peg Insert")
+		and action spaces (joint position control for "Berkeley Pick-up"). This makes Octo applicable to
+		a wide range of robot control problems that go beyond a single camera input and end-effector position
+		control.
 	</p>
 
 	<SideBySide />
@@ -250,14 +261,13 @@
 	<h2 class="text-4xl mt-16">Citation</h2>
 	<p class="mt-8">Please use the following BibTeX entry to cite this work:</p>
 	<pre class="mt-4 overflow-x-scroll bg-slate-100 p-8">
-{`@article{team2023octo,
-	title={Octo: An Open-Source Generalist Robot Policy},
-	author={Octo Model Team and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and You Liang Tan and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
-	year={2023}
+{`@misc{octo_2023,
+    title={Octo: An Open-Source Generalist Robot Policy},
+    author = {{Octo Model Team} and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and {You Liang} Tan and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
+    howpublished  = {\\url{https://octo-models.github.io}},
+    year = {2023},
 }`}</pre>
 </div>
-
-<div class="pb-[1000px]" />
 
 <style>
 	th {
