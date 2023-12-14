@@ -22,11 +22,11 @@
 		<div
 			class="flex justify-center flex-wrap mt-2 underline decoration-dotted decoration-blue-500 underline-offset-2"
 		>
-			<span class="px-2"> Dibya Ghosh<sup>1</sup> </span>
-			<span class="px-2"> Homer Walke<sup>1</sup> </span>
-			<span class="px-2"> Karl Pertsch<sup>1,2</sup> </span>
-			<span class="px-2"> Kevin Black<sup>1</sup> </span>
-			<span class="px-2"> Oier Mees<sup>1</sup> </span>
+			<span class="px-2"> Dibya Ghosh*<sup>,1</sup> </span>
+			<span class="px-2"> Homer Walke*<sup>,1</sup> </span>
+			<span class="px-2"> Karl Pertsch*<sup>,1,2</sup> </span>
+			<span class="px-2"> Kevin Black*<sup>,1</sup> </span>
+			<span class="px-2"> Oier Mees*<sup>,1</sup> </span>
 		</div>
 		<div
 			class="flex justify-center flex-wrap mt-2 underline decoration-dotted decoration-amber-500 underline-offset-2"
@@ -45,7 +45,10 @@
 			<span class="px-2">Chelsea Finn<sup>2</sup></span>
 			<span class="px-2">Sergey Levine<sup>1</sup></span>
 		</div>
-		<div class="flex justify-center flex-wrap mt-4">
+		<div class="flex justify-center mt-4">
+			*denotes equal contribution, listed in alphabetical order
+		</div>
+		<div class="flex justify-center flex-wrap">
 			<span class="px-4">1. UC Berkeley</span>
 			<span class="px-4">2. Stanford University</span>
 			<span class="px-4">3. Carnegie Mellon University</span>
@@ -97,6 +100,7 @@
 
 <!-- content column again -->
 <div class="max-w-6xl w-full px-2 pt-4 mx-auto">
+	<!-- intro and teaser -->
 	<p class="mt-8 text-l">
 		We introduce <Octo />, our ongoing effort for building open-source, widely applicable generalist
 		policies for robotic manipulation. The Octo model is a transformer-based diffusion policy,
@@ -108,6 +112,7 @@
 	</p>
 	<img src="{base}/teaser.jpg" alt="teaser" class="w-full mt-16 px-2 md:px-16" />
 
+	<!-- the model -->
 	<h2 class="text-4xl mt-16">The Model</h2>
 	<p class="mt-8">
 		The design of the Octo model emphasizes flexibility and scale: the model is designed to support
@@ -123,8 +128,8 @@
 		<img src="{base}/architecture.jpg" alt="model" class="w-full mt-16 px-2 md:px-16" />
 	</p>
 
+	<!-- the data -->
 	<h2 class="text-4xl mt-16">The Data</h2>
-
 	<p class="mt-8">
 		We train Octo on a mixture of 25 datasets from the Open X-Embodiment Dataset, a diverse
 		collection of robot learning datasets. Our training mixture includes data from a variety of
@@ -134,6 +139,7 @@
 		<img src="{base}/sampling_weights.jpg" alt="model" class="w-full px-2 md:w-3/4 mt-16 mx-auto" />
 	</p>
 
+	<!-- the results -->
 	<h2 class="text-4xl mt-16">The Results</h2>
 	<p class="mt-8">
 		We evaluate Octo on 6 real robot setups across 3 institutions. Our evaluations capture diverse
@@ -147,37 +153,36 @@
 	</p>
 
 	<div class="flex flex-wrap gap-y-4 justify-center mt-16">
-		
-		<table class="mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="mr-2 md:mr-4 border-collapse text-center text-xs md:text-base lg:text-lg">
 			<thead>
 				<tr>
 					<th colspan="3" class="text-lg">Zero-shot</th>
 				</tr>
 				<tr class="border-b border-t-2 border-black">
 					<th />
-					<th>WindowX Sink</th>
+					<th>WindowX</th>
 					<th>UR5</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>RT-1-X</td>
-					<td>0.00</td>
-					<td>0.00</td>
+					<td>0.20</td>
+					<td>0.35</td>
 				</tr>
 				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>RT-2-X</td>
-					<td>0.00</td>
-					<td>0.00</td>
+					<td class="font-bold">0.50</td>
+					<td>&mdash;</td>
 				</tr>
-				<tr class="border-b-2 border-black">
-					<td><Octo/></td>
-					<td>0.00</td>
-					<td>0.00</td>
+				<tr class="border-b-2 border-black font-bold">
+					<td><Octo /></td>
+					<td>0.50</td>
+					<td>0.70</td>
 				</tr>
 			</tbody>
 		</table>
-		<table class="mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="ml-2 md:ml-4 border-collapse text-center text-xs md:text-base lg:text-lg">
 			<thead>
 				<tr>
 					<th colspan="6" class="text-lg">Finetuning</th>
@@ -194,35 +199,45 @@
 			<tbody>
 				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>From Scratch</td>
+					<td>0.25</td>
+					<td>0.45</td>
+					<td>0.10</td>
 					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
+					<td>0.20</td>
 				</tr>
 				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>VC-1</td>
+					<td>0.30</td>
 					<td>0.00</td>
+					<td>0.05</td>
 					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
+					<td>0.88</td>
 				</tr>
-				<tr class="border-b-2 border-black">
-					<td><Octo/></td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
-					<td>0.00</td>
+				<tr class="border-b-2 border-black font-bold">
+					<td><Octo /></td>
+					<td>0.50</td>
+					<td>0.75</td>
+					<td>0.70</td>
+					<td>0.60</td>
+					<td>0.64</td>
 				</tr>
 			</tbody>
 		</table>
 	</div>
 	<div class="mt-2 flex justify-center text-xs md:text-base">
-        <div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div>
-        <div class="px-4"><sup>†</sup>New action space (joint position control)</div>
-    </div>
+		<div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div>
+		<div class="px-4"><sup>†</sup>New action space (joint position control)</div>
+	</div>
+
+	<!-- citation -->
+	<h2 class="text-4xl mt-16">Citation</h2>
+	<p class="mt-8">Please use the following BibTeX entry to cite this work:</p>
+	<pre class="mt-4 overflow-x-scroll bg-slate-100 p-8">
+{`@article{team2023octo,
+	title={Octo: An Open-Source Foundation Model for Robotic Manipulation},
+	author={Octo Model Team and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and You Liang Tan and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
+	year={2023}
+}`}</pre>
 </div>
 
 <div class="pb-[1000px]" />
@@ -236,7 +251,7 @@
 		text-align: left;
 	}
 
-	td  {
+	td {
 		line-height: 1rem;
 	}
 

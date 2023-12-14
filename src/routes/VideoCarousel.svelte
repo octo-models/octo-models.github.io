@@ -5,32 +5,45 @@
 
 	export let renderVideos = false;
 
-	const videoNames = ['out_ur5', 'out_cmu', 'out_iliad', 'out_fmb'];
+	const videoNames = ['out_ur5', 'out_cmu', 'out_iliad', 'out_fmb', 'out_bridge', 'out_rpt'];
 
 	const videoData = videoNames.map((name) => ({
 		src: `videos/${name}.mp4`,
 		image_src: `videos/${name}.jpg`,
 		text: name.replaceAll('-', ' ')
 	}));
+
+	let renderVideo = Array(videoData.length).fill(false);
+
+	function handleVisible(e) {
+		renderVideo[e.detail.Slide.index] = true;
+	}
+
+	function handleHidden(e) {
+		renderVideo[e.detail.Slide.index] = false;
+	}
 </script>
 
 <div class="w-full flex justify-center" id="container">
 	<Splide
 		options={{
 			perPage: 3,
+			perMove: 1,
 			start: 0,
 			autoplay: true,
-			type: "loop",
+			rewind: true,
 			breakpoints: {
 				768: {
 					perPage: 1
 				}
 			}
 		}}
+		on:visible={handleVisible}
+		on:hidden={handleHidden}
 	>
 		{#each videoData as video, i}
 			<SplideSlide>
-				{#if renderVideos}
+				{#if renderVideos && renderVideo[i]}
 					<div class="px-2">
 						<div class="rounded-lg overflow-hidden flex justify-center">
 							<video
@@ -44,6 +57,11 @@
 								src="{base}/{video.src}"
 								poster="{base}/{video.image_src}"
 							/>
+							<span
+								class="absolute bottom-0.5 right-3 bg-slate-100 bg-opacity-50 text-stone-700 text-s px-1 rounded-md"
+							>
+								2x
+							</span>
 						</div>
 					</div>
 				{:else}
