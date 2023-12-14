@@ -53,14 +53,14 @@
 	</div>
 
 	<!-- links -->
-	<div class="flex space-x-20 justify-center text-center pt-4 text-lg pb-4 mx-8">
-		<div class="flex flex-col justify-center hover:bg-sky-200 rounded-md">
+	<div class="flex w-full justify-between text-center pt-4 text-lg pb-4 mx-auto px-4">
+		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
 			<a href="{base}/" class="hover:underline text-black p-4 flex flex-col items-center">
 				<img src="{base}/documents.svg" alt="documents" class="w-16" />
 				Report
 			</a>
 		</div>
-		<div class="flex flex-col justify-center hover:bg-sky-200 rounded-md">
+		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
 			<a
 				href="https://github.com/octo-models/octo"
 				class="hover:underline text-black p-4 flex flex-col items-center"
@@ -69,7 +69,16 @@
 				Code
 			</a>
 		</div>
-		<div class="flex flex-col justify-center hover:bg-sky-200 rounded-md">
+		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
+			<a
+				href="https://colab.research.google.com/drive/1z0vELj_lX9OWeoMG_WvXnQs43aPOEAhz?usp=sharing"
+				class="hover:underline text-black p-4 flex flex-col items-center"
+			>
+				<img src="{base}/colab2.svg" alt="colab" class="w-20" />
+				Colab
+			</a>
+		</div>
+		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
 			<a
 				href="https://huggingface.co/rail-berkeley"
 				class="hover:underline text-black p-4 flex flex-col items-center"
@@ -137,9 +146,9 @@
 		<img src="{base}/exp_setups.jpg" alt="model" class="w-full mt-16 px-2 md:px-8 mx-auto" />
 	</p>
 
-	<div class="flex flex-nowrap justify-between mt-16">
+	<div class="flex flex-wrap gap-y-4 justify-center mt-16">
 		
-		<table class="w-1/4 mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
 			<thead>
 				<tr>
 					<th colspan="3" class="text-lg">Zero-shot</th>
@@ -168,7 +177,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<table class="w-3/4 mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
 			<thead>
 				<tr>
 					<th colspan="6" class="text-lg">Finetuning</th>
@@ -229,5 +238,9 @@
 
 	td  {
 		line-height: 1rem;
+	}
+
+	th {
+		padding: 0 0.5em;
 	}
 </style>
