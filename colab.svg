@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 14.582307 13.858555"
+   preserveAspectRatio="xMidYMid"
+   focusable="false"
+   style="display:block"
+   width="593.6214"
+   height="347.61874"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="colab.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
+  <defs
+     id="defs5" />
+  <g
+     id="g5"
+     transform="translate(-2.2167236,-4.7623321)">
+    <path
+       d="M 2.0648712,9.1235482 -0.29403419,6.7746799 C -2.993375,9.4798079 -3.0065446,13.872722 -0.30720379,16.57785 L 2.0659658,14.20468 C 0.66589411,12.806263 0.67032681,10.527478 2.0648712,9.1235482 Z"
+       style="fill:#000000;fill-opacity:1"
+       fill="#E8710A"
+       id="path1" />
+    <path
+       d="m -0.30720379,6.7878495 2.34999999,2.36 a 3.59,3.59 0 0 1 5.08,0 l 1.71,-2.93 v 0 l -0.1,-0.08 v 0 a 6.93,6.93 0 0 0 -9.03999999,0.65 z"
+       style="fill:#303030;fill-opacity:1"
+       fill="#F9AB00"
+       id="path2" />
+    <path
+       d="m 8.8427962,17.14785 v 0 l -1.72,-2.92 c -1.4023216,1.403966 -3.6776784,1.383294 -5.08,-0.02067 l -2.36588139,2.35526 C 2.105585,18.970097 5.9433625,19.271533 8.6927962,17.23785 l 0.11,-0.09"
+       style="fill:#303030;fill-opacity:1"
+       fill="#F9AB00"
+       id="path3" />
+    <path
+       d="m 9.6067132,6.906123 c -2.6993405,2.7051279 -2.7858781,6.998334 -0.086538,9.703462 l 2.3757338,-2.36 C 8.5074342,10.862921 13.578535,5.7738148 16.96701,9.1604796 L 19.32107,6.7945391 C 16.613653,4.0818663 12.314129,4.1934502 9.6067132,6.906123 Z"
+       fill="#F9AB00"
+       id="path4"
+       style="fill:#303030;fill-opacity:1" />
+    <path
+       d="m 19.312796,6.7878495 -2.35,2.36 a 3.5921026,3.5921026 0 0 1 -5.08,5.0800005 l -2.3799998,2.36 A 6.933183,6.933183 0 0 0 19.312796,6.7878495 Z"
+       style="fill:#000000;fill-opacity:1"
+       fill="#E8710A"
+       id="path5" />
+  </g>
+</svg>
