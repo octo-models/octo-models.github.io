@@ -212,7 +212,7 @@
 					<td>0.00</td>
 					<td>0.05</td>
 					<td>0.00</td>
-					<td>0.88</td>
+					<td>0.09</td>
 				</tr>
 				<tr class="border-b-2 border-black font-bold">
 					<td><Octo /></td>
