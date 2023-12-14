@@ -53,7 +53,7 @@
 	</div>
 
 	<!-- links -->
-	<div class="flex space-x-20 justify-center text-center pt-4 text-lg pb-4">
+	<div class="flex space-x-20 justify-center text-center pt-4 text-lg pb-4 mx-8">
 		<div class="flex flex-col justify-center hover:bg-sky-200 rounded-md">
 			<a href="{base}/" class="hover:underline text-black p-4 flex flex-col items-center">
 				<img src="{base}/documents.svg" alt="documents" class="w-16" />
@@ -97,7 +97,7 @@
 		action spaces. We are introducing two initial versions of Octo, Octo-Small (27M parameters) and
 		Octo-Base (93M parameters).
 	</p>
-	<img src="{base}/teaser.jpg" alt="teaser" class="w-full mt-16 px-16" />
+	<img src="{base}/teaser.jpg" alt="teaser" class="w-full mt-16 px-2 md:px-16" />
 
 	<h2 class="text-4xl mt-16">The Model</h2>
 	<p class="mt-8">
@@ -111,7 +111,7 @@
 		make Octo a flexible and broadly applicable generalist robotic policy that can be utilized for a
 		variety of downstream robotics applications and research projects.
 
-		<img src="{base}/architecture.jpg" alt="model" class="w-full mt-16 px-16" />
+		<img src="{base}/architecture.jpg" alt="model" class="w-full mt-16 px-2 md:px-16" />
 	</p>
 
 	<h2 class="text-4xl mt-16">The Data</h2>
@@ -122,7 +122,7 @@
 		robot embodiments, scenes, and tasks. These datasets are heterogeneous not just in terms of the
 		robot type, but also in the sensors (e.g., including or not including wrist cameras) and labels
 		(e.g., including or not including language instructions).
-		<img src="{base}/sampling_weights.jpg" alt="model" class="w-3/4 mt-16 mx-auto" />
+		<img src="{base}/sampling_weights.jpg" alt="model" class="w-full px-2 md:w-3/4 mt-16 mx-auto" />
 	</p>
 
 	<h2 class="text-4xl mt-16">The Results</h2>
@@ -134,12 +134,12 @@
 		new tasks and environments with small target domain datasets. We also test finetuning with new
 		observations (force-torque inputs for "Berkeley Peg Insert") and action spaces (joint position
 		control in "Berkeley Pick-up").
-		<img src="{base}/exp_setups.jpg" alt="model" class="w-full mt-16 px-8 mx-auto" />
+		<img src="{base}/exp_setups.jpg" alt="model" class="w-full mt-16 px-2 md:px-8 mx-auto" />
 	</p>
 
 	<div class="flex flex-nowrap justify-between mt-16">
 		
-		<table class="w-1/4 mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="w-1/4 mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
 			<thead>
 				<tr>
 					<th colspan="3" class="text-lg">Zero-shot</th>
@@ -151,12 +151,12 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>RT-1-X</td>
 					<td>0.00</td>
 					<td>0.00</td>
 				</tr>
-				<tr>
+				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>RT-2-X</td>
 					<td>0.00</td>
 					<td>0.00</td>
@@ -168,7 +168,7 @@
 				</tr>
 			</tbody>
 		</table>
-		<table class="w-3/4 mx-8 border-collapse text-center text-xs md:text-base">
+		<table class="w-3/4 mx-2 md:mx-8 border-collapse text-center text-xs md:text-base">
 			<thead>
 				<tr>
 					<th colspan="6" class="text-lg">Finetuning</th>
@@ -183,7 +183,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>From Scratch</td>
 					<td>0.00</td>
 					<td>0.00</td>
@@ -191,7 +191,7 @@
 					<td>0.00</td>
 					<td>0.00</td>
 				</tr>
-				<tr>
+				<tr class="md:border-b-8 md:border-b-transparent">
 					<td>VC-1</td>
 					<td>0.00</td>
 					<td>0.00</td>
@@ -228,6 +228,6 @@
 	}
 
 	td  {
-		line-height: 2rem;
+		line-height: 1rem;
 	}
 </style>
