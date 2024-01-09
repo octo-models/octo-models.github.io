@@ -14,14 +14,14 @@
 	
 		<link href="./_app/immutable/assets/0.7eed2a61.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/2.ccce21b9.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.268c8aab.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.45ec2203.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.df819399.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.6bff2dde.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.5af3a758.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.45545570.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.2c198ea2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.4da4de2a.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.c4b73bd0.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.8f68d1ce.js">
 		<link rel="modulepreload" href="./_app/immutable/nodes/0.5c5a31ea.js">
-		<link rel="modulepreload" href="./_app/immutable/nodes/2.6becd65e.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.8a963cfe.js">
 </head>
 
 <body data-sveltekit-preload-data="hover">
@@ -57,7 +57,7 @@
 		new tasks and environments with small target domain datasets. We also test finetuning with new
 		observations (force-torque inputs for &quot;Berkeley Peg Insert&quot;) and action spaces (joint position
 		control in &quot;Berkeley Pick-up&quot;).
-		<img src="/exp_setups.jpg" alt="model" class="w-full mt-16 px-2 md:px-8 mx-auto"></p> <div class="flex flex-wrap gap-y-4 justify-center mt-16"><table class="mr-2 md:mr-4 border-collapse text-center text-xs md:text-base lg:text-lg"><thead data-svelte-h="svelte-oo4qho"><tr><th colspan="3" class="text-lg svelte-ii6qa2">Zero-shot</th></tr> <tr class="border-b border-t-2 border-black"><th class="svelte-ii6qa2"></th> <th class="svelte-ii6qa2">WindowX</th> <th class="svelte-ii6qa2">UR5</th></tr></thead> <tbody><tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-1nx7e02"><td class="svelte-ii6qa2">RT-1-X</td> <td class="svelte-ii6qa2">0.20</td> <td class="svelte-ii6qa2">0.35</td></tr> <tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-1rvf4dw"><td class="svelte-ii6qa2">RT-2-X</td> <td class="font-bold svelte-ii6qa2">0.50</td> <td class="svelte-ii6qa2">—</td></tr> <tr class="border-b-2 border-black font-bold svelte-ii6qa2"><td class="svelte-ii6qa2">Octo <img src="/octo.png" alt="octo" class="h-[1em] inline align-[-0.1em]"></td> <td class="svelte-ii6qa2" data-svelte-h="svelte-1jskovd">0.50</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-g0d817">0.70</td></tr></tbody></table> <table class="ml-2 md:ml-4 border-collapse text-center text-xs md:text-base lg:text-lg"><thead data-svelte-h="svelte-kdrmok"><tr><th colspan="6" class="text-lg svelte-ii6qa2">Finetuning</th></tr> <tr class="border-b border-t-2 border-black"><th class="svelte-ii6qa2"></th> <th class="svelte-ii6qa2">CMU Baking</th> <th class="svelte-ii6qa2">Stanford Coffee</th> <th class="svelte-ii6qa2">Berkeley Peg Insert<sup>*</sup></th> <th class="svelte-ii6qa2">Berkeley Pick-up<sup>†</sup></th> <th class="svelte-ii6qa2">Average</th></tr></thead> <tbody><tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-x9vv2o"><td class="svelte-ii6qa2">From Scratch</td> <td class="svelte-ii6qa2">0.25</td> <td class="svelte-ii6qa2">0.45</td> <td class="svelte-ii6qa2">0.10</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.20</td></tr> <tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-wd15py"><td class="svelte-ii6qa2"><a href="https://eai-vc.github.io/">VC-1</a></td> <td class="svelte-ii6qa2">0.30</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.05</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.09</td></tr> <tr class="border-b-2 border-black font-bold svelte-ii6qa2"><td class="svelte-ii6qa2">Octo <img src="/octo.png" alt="octo" class="h-[1em] inline align-[-0.1em]"></td> <td class="svelte-ii6qa2" data-svelte-h="svelte-1jskovd">0.50</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-uuwxug">0.75</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-g0d817">0.70</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-trvq3u">0.60</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-3e69h2">0.64</td></tr></tbody></table></div> <div class="mt-2 flex justify-center text-xs md:text-base" data-svelte-h="svelte-ykbvn7"><div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div> <div class="px-4"><sup>†</sup>New action space (joint position control)</div></div> <p class="mt-8" data-svelte-h="svelte-1te8rbi">Out-of-the-box, Octo can control multiple robots in environments from the pretraining data. When
+		<img src="/exp_setups.jpg" alt="model" class="w-full mt-16 px-2 md:px-8 mx-auto"></p> <div class="flex flex-wrap gap-y-4 justify-center mt-16"><table class="mr-2 md:mr-4 border-collapse text-center text-xs md:text-base lg:text-lg"><thead data-svelte-h="svelte-14b6ujw"><tr><th colspan="3" class="text-lg svelte-ii6qa2">Zero-shot</th></tr> <tr class="border-b border-t-2 border-black"><th class="svelte-ii6qa2"></th> <th class="svelte-ii6qa2">WidowX</th> <th class="svelte-ii6qa2">UR5</th></tr></thead> <tbody><tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-1nx7e02"><td class="svelte-ii6qa2">RT-1-X</td> <td class="svelte-ii6qa2">0.20</td> <td class="svelte-ii6qa2">0.35</td></tr> <tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-1rvf4dw"><td class="svelte-ii6qa2">RT-2-X</td> <td class="font-bold svelte-ii6qa2">0.50</td> <td class="svelte-ii6qa2">—</td></tr> <tr class="border-b-2 border-black font-bold svelte-ii6qa2"><td class="svelte-ii6qa2">Octo <img src="/octo.png" alt="octo" class="h-[1em] inline align-[-0.1em]"></td> <td class="svelte-ii6qa2" data-svelte-h="svelte-1jskovd">0.50</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-g0d817">0.70</td></tr></tbody></table> <table class="ml-2 md:ml-4 border-collapse text-center text-xs md:text-base lg:text-lg"><thead data-svelte-h="svelte-kdrmok"><tr><th colspan="6" class="text-lg svelte-ii6qa2">Finetuning</th></tr> <tr class="border-b border-t-2 border-black"><th class="svelte-ii6qa2"></th> <th class="svelte-ii6qa2">CMU Baking</th> <th class="svelte-ii6qa2">Stanford Coffee</th> <th class="svelte-ii6qa2">Berkeley Peg Insert<sup>*</sup></th> <th class="svelte-ii6qa2">Berkeley Pick-up<sup>†</sup></th> <th class="svelte-ii6qa2">Average</th></tr></thead> <tbody><tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-x9vv2o"><td class="svelte-ii6qa2">From Scratch</td> <td class="svelte-ii6qa2">0.25</td> <td class="svelte-ii6qa2">0.45</td> <td class="svelte-ii6qa2">0.10</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.20</td></tr> <tr class="md:border-b-8 md:border-b-transparent svelte-ii6qa2" data-svelte-h="svelte-wd15py"><td class="svelte-ii6qa2"><a href="https://eai-vc.github.io/">VC-1</a></td> <td class="svelte-ii6qa2">0.30</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.05</td> <td class="svelte-ii6qa2">0.00</td> <td class="svelte-ii6qa2">0.09</td></tr> <tr class="border-b-2 border-black font-bold svelte-ii6qa2"><td class="svelte-ii6qa2">Octo <img src="/octo.png" alt="octo" class="h-[1em] inline align-[-0.1em]"></td> <td class="svelte-ii6qa2" data-svelte-h="svelte-1jskovd">0.50</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-uuwxug">0.75</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-g0d817">0.70</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-trvq3u">0.60</td> <td class="svelte-ii6qa2" data-svelte-h="svelte-3e69h2">0.64</td></tr></tbody></table></div> <div class="mt-2 flex justify-center text-xs md:text-base" data-svelte-h="svelte-ykbvn7"><div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div> <div class="px-4"><sup>†</sup>New action space (joint position control)</div></div> <p class="mt-8" data-svelte-h="svelte-1te8rbi">Out-of-the-box, Octo can control multiple robots in environments from the pretraining data. When
 		using natural language to specify tasks, it outperforms <a href="https://robotics-transformer-x.github.io/">RT-1-X</a>: the current best, openly available generalist robotic policy. It performs similarly to
 		<a href="https://robotics-transformer-x.github.io/">RT-2-X</a>, a 55-billion parameter model.
 		Additionally, while RT-1-X and RT-2-X only support language conditioning, Octo also supports
@@ -80,7 +80,7 @@
 			
 			<script>
 				{
-					__sveltekit_7dijbm = {
+					__sveltekit_ewml6c = {
 						base: new URL(".", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -90,8 +90,8 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.268c8aab.js"),
-						import("./_app/immutable/entry/app.45545570.js")
+						import("./_app/immutable/entry/start.45ec2203.js"),
+						import("./_app/immutable/entry/app.c4b73bd0.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 2],
