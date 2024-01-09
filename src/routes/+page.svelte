@@ -34,9 +34,9 @@
 		>
 			<span class="px-2">Sudeep Dasari<sup>3</sup></span>
 			<span class="px-2">Joey Hejna<sup>2</sup></span>
+			<span class="px-2">Tobias Kreiman<sup>1</sup></span>
 			<span class="px-2">Charles Xu<sup>1</sup></span>
 			<span class="px-2">Jianlan Luo<sup>1</sup></span>
-			<span class="px-2">Tobias Kreiman<sup>1</sup></span>
 			<span class="px-2">You Liang Tan<sup>1</sup></span>
 		</div>
 		<div
@@ -161,7 +161,7 @@
 				</tr>
 				<tr class="border-b border-t-2 border-black">
 					<th />
-					<th>WindowX</th>
+					<th>WidowX</th>
 					<th>UR5</th>
 				</tr>
 			</thead>
