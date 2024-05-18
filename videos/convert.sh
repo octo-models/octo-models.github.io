@@ -1,4 +1,5 @@
-for NAME in rt1_ur5_cloth.mp4 ours_ur5_cloth.mp4 rt1_ur5_tiger.mp4 ours_ur5_tiger.mp4 rpt_octo.mp4 rpt_vc1.mp4 rpt_scratch.mp4 rt1_bridge.mov rpt.mp4 bridge.mov cmu.mov iliad.mov fmb.mov ur5.mp4; do
+# for NAME in rt1_ur5_cloth.mp4 ours_ur5_cloth.mp4 rt1_ur5_tiger.mp4 ours_ur5_tiger.mp4 rpt_octo.mp4 rpt_vc1.mp4 rpt_scratch.mp4 rt1_bridge.mov rpt.mp4 bridge.mov cmu.mov iliad.mov fmb.mov ur5.mp4; do
+for NAME in google.mp4; do
     if [[ $NAME == *".mov" ]] && [[ $NAME != "cmu.mov" ]]; then
         if [[ $NAME == "iliad.mov" ]]; then
             VF="setpts=PTS/2,zscale=t=linear:npl=110,tonemap=tonemap=hable:desat=0,format=yuv420p"
