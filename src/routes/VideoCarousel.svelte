@@ -12,7 +12,9 @@
 		'out_ours_ur5_cloth',
 		'out_fmb',
 		'out_bridge',
-		'out_rpt'
+		'out_rpt',
+		'out_aloha',
+		'out_google'
 	];
 
 	const videoData = videoNames.map((name) => ({

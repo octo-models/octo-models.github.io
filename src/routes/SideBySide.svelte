@@ -88,6 +88,70 @@
 								playsinline
 								loop
 								autoplay
+								src={lazy(isOpen, 'out_google_octo')}
+							/>
+							<span
+								class="absolute bottom-0.5 right-0.5 bg-slate-100 bg-opacity-50 text-stone-700 text-s px-1 rounded-md"
+							>
+								2x
+							</span>
+						</div>
+					</div>
+					<div class="flex flex-col pl-1">
+						<div class="text-center pb-1 text-sm">
+							RT-1-X
+						</div>
+						<div class="rounded-lg overflow-hidden relative">
+							<video
+								disableRemotePlayback
+								muted
+								webkit-playsinline
+								playsinline
+								loop
+								autoplay
+								src={lazy(isOpen, 'out_google_rt1')}
+							/>
+							<span
+								class="absolute bottom-0.5 right-0.5 bg-slate-100 bg-opacity-50 text-stone-700 text-s px-1 rounded-md"
+							>
+								2x
+							</span>
+						</div>
+					</div>
+					<div class="flex flex-col pl-1">
+						<div class="text-center pb-1 text-sm">RT-2-X</div>
+						<div class="rounded-lg overflow-hidden relative">
+							<video
+								disableRemotePlayback
+								muted
+								webkit-playsinline
+								playsinline
+								loop
+								autoplay
+								src={lazy(isOpen, 'out_google_rt2')}
+							/>
+							<span
+								class="absolute bottom-0.5 right-0.5 bg-slate-100 bg-opacity-50 text-stone-700 text-s px-1 rounded-md"
+							>
+								2x
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col max-w-[500px] mx-2 py-2">
+				<div class="flex justify-center">
+					<div class="flex flex-col">
+						<div class="text-center pb-1 text-sm"><Octo /></div>
+						<div class="rounded-lg overflow-hidden relative">
+							<video
+								disableRemotePlayback
+								muted
+								webkit-playsinline
+								playsinline
+								loop
+								autoplay
 								src={lazy(isOpen, 'out_bridge')}
 							/>
 							<span
