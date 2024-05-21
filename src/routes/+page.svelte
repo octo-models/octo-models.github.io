@@ -49,10 +49,10 @@
 			<span class="px-2">Chelsea Finn<sup>2</sup></span>
 			<span class="px-2">Sergey Levine<sup>1</sup></span>
 		</div>
-		<div class="flex justify-center mt-4">
+		<div class="flex justify-center mt-4 mx-2 text-center">
 			*denotes equal contribution, listed in alphabetical order
 		</div>
-		<div class="flex justify-center flex-wrap">
+		<div class="flex justify-center flex-wrap mt-4">
 			<span class="px-4">1. UC Berkeley</span>
 			<span class="px-4">2. Stanford University</span>
 			<span class="px-4">3. Carnegie Mellon University</span>
@@ -63,7 +63,7 @@
 	<!-- links -->
 	<div class="flex w-full justify-between text-center pt-4 text-lg pb-4 mx-auto px-4">
 		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
-			<a href="{base}/paper.pdf" class="hover:underline text-black p-4 flex flex-col items-center">
+			<a href="https://arxiv.org/pdf/2405.12213" class="hover:underline text-black p-4 flex flex-col items-center">
 				<img src="{base}/documents.svg" alt="documents" class="w-16" />
 				Report
 			</a>
@@ -153,7 +153,7 @@
 		robots in environments from the pretraining data out-of-the-box and to efficiently finetune to
 		new tasks and environments with small target domain datasets. We also test finetuning with new
 		observations (force-torque inputs for "Berkeley Peg Insert") and action spaces (joint position
-		control in "Berkeley Pick-up").
+		control in "Berkeley Pick-Up").
 		<img src="{base}/exp_setups.jpg" alt="model" class="w-full mt-16 px-2 md:px-8 mx-auto" />
 	</p>
 
@@ -187,11 +187,11 @@
 					<td><Octo /></td>
 					<td>0.50</td>
 					<td>0.70</td>
-					<td>0.80</td>
+					<td class="font-normal">0.80</td>
 				</tr>
 			</tbody>
 		</table>
-		<table class="ml-2 md:ml-4 border-collapse text-center text-xs">
+		<table class="ml-2 md:ml-4 border-collapse text-center md:text-xs text-[0.5rem]">
 			<thead>
 				<tr>
 					<th colspan="8" class="text-lg">Finetuning</th>
@@ -201,7 +201,7 @@
 					<th>CMU Baking</th>
 					<th>Stanford Coffee</th>
 					<th>Berkeley Peg Insert<sup>*</sup></th>
-					<th>Berkeley Pick-up<sup>†</sup></th>
+					<th>Berkeley Pick-Up<sup>†</sup></th>
 					<th>Berkeley Bimanual<sup>†</sup></th>
 					<th>Berkeley Coke</th>
 					<th>Average</th>
@@ -241,7 +241,7 @@
 			</tbody>
 		</table>
 	</div>
-	<div class="mt-2 ml-40 flex justify-center text-xs md:text-sm">
+	<div class="mt-2 flex justify-center text-[0.5rem] md:text-sm">
 		<div class="px-4"><sup>*</sup>New observation input (force-torque proprioception)</div>
 		<div class="px-4"><sup>†</sup>New action space (joint position control)</div>
 	</div>
