@@ -42,6 +42,7 @@
 		<div
 			class="flex justify-center flex-wrap mt-2 underline decoration-dotted decoration-green-500 underline-offset-2"
 		>
+			<span class="px-2">Lawrence Yunliang Chen<sup>1</sup></span>
 			<span class="px-2">Pannag Sanketi<sup>4</sup></span>
 			<span class="px-2">Quan Vuong<sup>4</sup></span>
 			<span class="px-2">Ted Xiao<sup>4</sup></span>
@@ -279,7 +280,7 @@
 	<pre class="mt-4 overflow-x-scroll bg-slate-100 p-8">
 {`@inproceedings{octo_2023,
     title={Octo: An Open-Source Generalist Robot Policy},
-    author = {{Octo Model Team} and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and {You Liang} Tan and Pannag Sanketi and Quan Vuong and Ted Xiao and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
+    author = {{Octo Model Team} and Dibya Ghosh and Homer Walke and Karl Pertsch and Kevin Black and Oier Mees and Sudeep Dasari and Joey Hejna and Charles Xu and Jianlan Luo and Tobias Kreiman and {You Liang} Tan and Lawrence Yunliang Chen and Pannag Sanketi and Quan Vuong and Ted Xiao and Dorsa Sadigh and Chelsea Finn and Sergey Levine},
     booktitle = {Proceedings of Robotics: Science and Systems},
     address  = {Delft, Netherlands},
     year = {2024},
