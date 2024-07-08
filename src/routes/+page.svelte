@@ -64,7 +64,10 @@
 	<!-- links -->
 	<div class="flex w-full justify-between text-center pt-4 text-lg pb-4 mx-auto px-4">
 		<div class="flex flex-col justify-end hover:bg-sky-200 rounded-md w-32">
-			<a href="https://arxiv.org/pdf/2405.12213" class="hover:underline text-black p-4 flex flex-col items-center">
+			<a
+				href="https://arxiv.org/pdf/2405.12213"
+				class="hover:underline text-black p-4 flex flex-col items-center"
+			>
 				<img src="{base}/documents.svg" alt="documents" class="w-16" />
 				Report
 			</a>
@@ -117,6 +120,18 @@
 		Octo-Base (93M parameters).
 	</p>
 	<img src="{base}/teaser.jpg" alt="teaser" class="w-full mt-16 px-2 md:px-16" />
+
+	<div class="flex justify-center mt-16">
+		<iframe
+			width=800
+			height=450
+			src="https://www.youtube.com/embed/99667VDGWMg"
+			title=""
+			frameBorder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowFullScreen
+		/>
+	</div>
 
 	<!-- the model -->
 	<h2 class="text-4xl mt-16">The Model</h2>
@@ -260,16 +275,17 @@
 	</p>
 	<p class="mt-4">
 		We also find that finetuning Octo leads to better policies than starting from scratch or with
-		the pretrained <a href="https://eai-vc.github.io">VC-1</a> weights. On average across the six evaluation 
-		setups, Octo outperforms the next best baseline by 52%. Each task uses &#126;100 target
-		demonstrations. Importantly, we use
+		the pretrained <a href="https://eai-vc.github.io">VC-1</a> weights. On average across the six
+		evaluation setups, Octo outperforms the next best baseline by 52%. Each task uses &#126;100
+		target demonstrations. Importantly, we use
 		<a href="https://github.com/octo-models/octo/blob/main/scripts/configs/finetune_config.py"
 			>the same finetuning recipe</a
-		> for all evaluation tasks, making this a good default configuration for Octo finetuning. The results 
-		also underline Octo’s ability to accommodate new observations (force-torque inputs for “Berkeley Insertion”),
-		action spaces (joint position control for “Berkeley Pick-Up”) and new robot embodiments (“Berkeley Bi-Manual” 
-		and “Berkeley Coke”). This makes Octo applicable to a wide range of single and dual arm robotic manipulation 
-		problems that go beyond a single camera input and end-effector position control.
+		> for all evaluation tasks, making this a good default configuration for Octo finetuning. The results
+		also underline Octo’s ability to accommodate new observations (force-torque inputs for “Berkeley
+		Insertion”), action spaces (joint position control for “Berkeley Pick-Up”) and new robot embodiments
+		(“Berkeley Bi-Manual” and “Berkeley Coke”). This makes Octo applicable to a wide range of single
+		and dual arm robotic manipulation problems that go beyond a single camera input and end-effector
+		position control.
 	</p>
 
 	<SideBySide />
